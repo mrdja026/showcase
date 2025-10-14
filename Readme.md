@@ -2,109 +2,147 @@
 
 ## Intro
 
-- 10YOE fullstack frontend heavy expirience
-- no backend production projects that i can call my own
-- Investigating AI/ML Ecosystem while on a Carier break
+- 10 years of experience as a fullstack, frontend-heavy developer
+- No production backend projects I can fully call my own
+- Currently on a career break, exploring the AI/ML ecosystem
 
-### Observations - Short and Blunt
+### Observations – Short and Blunt
 
-10 X Developers are not possible, 3-4 boost at best.
+“10X Developers” don’t exist. At best, you get a 3–4x boost.
+LLMS do produce good prompts for other LLMS.
+You need to know the model, and how to talk with it. English is a funny language and models are different
 
-## Video Demos
+---
+
+## Video Demos - All of these projects were written with ChatGPT, Codex, Cursor, KiloCode, Google AI Studio (for coding, of for brainstorming, debugging or creating prompts)
 
 ### Jira MCP Demo
 
-- Description: End-to-end demo showcasing a Model Context Protocol (MCP) server integrated with Jira. It fetches epic status and surfacing risks to answer PM-style questions using live project data and a controlled system prompt.
+**Description:**
+An end-to-end demo of a Model Context Protocol (MCP) server integrated with Jira. It fetches epic status, surfaces risks, and answers PM-style questions using live project data and a controlled system prompt.
 
-It uses a 2 model aproach where model one will determine from fuzzy search if it is a tool call for MCP, if yes, it will return the JSON to the user and feed it into another reasoning model.
-If it is a exact match of the pattern it will skip fuzzy search -> tool call step
+The setup uses a **two-model approach**:
 
-- Watch:
+1. Model one checks (via fuzzy search) whether a request is an MCP tool call.
 
-  - Direct link: [public/jira_mcp_demo.mp4](public/jira_mcp_demo.mp4)
-  - Inline preview (may not render on all platforms):
+   - If yes, it returns the JSON to the user and passes it into another reasoning model.
 
-    &lt;video src="public/jira_mcp_demo.mp4" controls width="720"&gt;
-    Your browser does not support the video tag. Use the direct link above.
-    &lt;/video&gt;
+2. If the request exactly matches a known pattern, it skips fuzzy search and goes straight to tool call.
+
+**Watch:**
+
+- Direct link: [public/jira_mcp_demo.mp4](public/jira_mcp_demo.mp4)
+- Inline preview (may not render on all platforms):
+
+  <video src="public/jira_mcp_demo.mp4" controls width="720">
+  Your browser does not support the video tag. Use the direct link above.
+  </video>
 
 ---
 
 ### WebGL Scene Maker
 
-- I wanted a ThreeJS 3 Scenes for my blog. I knew about ThreeJS and what is it abstraction of. This is made under 1 hour with 3,5 prompts in Codex (price 20e a month)
+I wanted to add **ThreeJS scenes** to my blog. I already knew the basics, but I challenged myself to build something quickly. The first step: **three voxel-style scenes** made in under one hour, with just 3.5 Codex prompts (20€ subscription).
 
-1. Asked ChatGPT to create me a prompt that will have three scenes with a guy in a room doing stuff, and for simplicity sake make it voxel (minecraft style)
-2. Second prompt is was to find me a good model for room and a person (one in siting position) and to change it.
-3. Add rotation so i can position them
-4. 0.5 was fixes after rotation (one prompt was make it like the pros do it)
+Steps:
 
-- Watch:
+1. Asked ChatGPT for a prompt to generate three scenes (guy in a room, Minecraft style).
+2. Next prompt: find good models for a room and a sitting character, then adapt them.
+3. Added rotation controls to reposition objects.
+4. Fixed small rotation issues with one final “make it like the pros do it” prompt.
 
-  - Direct link: [public/merged_video.mp4](public/merged_video.mp4)
-  - Inline preview (may not render on all platforms):
+**Watch:**
 
-    &lt;video src="public/merged_video.mp4" controls width="720"&gt;
-    Your browser does not support the video tag. Use the direct link above.
-    &lt;/video&gt;
+- Direct link: [public/merged_video.mp4](public/merged_video.mp4)
+- Inline preview (may not render on all platforms):
 
-### Dungeons and Dragons Singleplayer Agent
+  <video src="public/merged_video.mp4" controls width="720">
+  Your browser does not support the video tag. Use the direct link above.
+  </video>
 
-- FAST MCP for excelent tool call support for deterministic needs:
+---
+
+### Dungeons & Dragons Singleplayer Agent
+
+**NOTE** : I dont know Python, and absolutly do not know Terminal In UI (TUI) but this is a CLI game
+
+This demo shows how **FAST MCP** enables deterministic tool calling for gameplay mechanics:
+
 - Roll dice
 - Attack
-- Move (Left/Right/Up/Down)
-- Attack
+- Move (Left / Right / Up / Down)
+- Attack again
 
-After that the narative LLM goes into place, where it shifts between tool calling and naration using input from tool call to write a narative.
+Once actions are resolved, a narrative LLM takes over — blending tool outputs into a story.
 
-**EG** When i moved north i saw a dagger and that dagger has a place in the story
+**Example:**
+When I moved north, I found a dagger. That dagger then became part of the ongoing story.
 
-- Watch:
+**Watch:**
 
-  - Direct link: [public/dnd_agent_demo.mp4](public/dnd_agent_demo.mp4)
-  - Inline preview (may not render on all platforms):
+- Direct link: [public/dnd_agent_demo.mp4](public/dnd_agent_demo.mp4)
+- Inline preview (may not render on all platforms):
 
-    &lt;video src="public/dnd_agent_demo.mp4" controls width="720"&gt;
-    Your browser does not support the video tag. Use the direct link above.
-    &lt;/video&gt;
+  <video src="public/dnd_agent_demo.mp4" controls width="720">
+  Your browser does not support the video tag. Use the direct link above.
+  </video>
 
-**What are LLMS good for**:
+---
 
-- Automating boring stuff, writing one off testing scripts (my azure deployment is in one .sh file for fullstack project)
-- Understanding codebase faster (my expirience 50-70% increase)
-- For greenfield projects
-- Boilerplate code
-- Migrations (code, infra)
+## My Take on LLMs
 
-**What are LLMS bad for**:
+### What LLMs are **good** for
 
-- Doing calculations math stuff
-- Following instructions (ties into why prompting is hard)
-- They have a cutoff date - Dont have relevant data, or private data
-- They are trained on data that is available on the internet -> More Data -> More knowlage - If you want to use it for Haskel you wont find any joy
+- Automating boring tasks
+- Writing quick one-off scripts (e.g., my Azure fullstack deployment is a single `.sh` file)
+- Understanding codebases faster (my experience: **50–70% speedup**)
+- Greenfield projects
+- Boilerplate generation
+- Migrations (both code and infrastructure)
 
-**Prompting is HARD**
+### What LLMs are **bad** for
 
-There are lot of techniques how to prompt:
+- Complex calculations and math
+- Strictly following instructions (ties into why prompting is hard)
+- Staying current (they have cutoff dates, lack private data)
+- Niche domains with limited training data (e.g., Haskell)
 
-- Prompt engineering
-- Context engineering
-- Chain of thought
-  - EG: Add to prompt ask subquestions and wait for answer
+---
 
-**Context management**
+## Prompting is Hard
 
-- Every llm is usefull untill its 60% context is full. Then it starts summarizing the conversation (lossy compression) and goes from there. That ties into Prompting is Hard
+There are many techniques, but all boil down to the same principle: managing context.
 
-**MCPs**
+- **Prompt engineering**
+- **Context engineering**
+- **Chain of Thought (CoT)**
 
-- Custom MCPS allows users to add context to the LLM to produce results
-- That is somewhat flaky, you need to know when to run inference, by design MCP is like an API call that returns data
-- Scenario:
-  PM is wondering how the epic named EPIC-6 is going and are there any red flags, MCP fetches the data for it, add it to context of the LLM and then you can ask questions about that - System prompt is very important here
+  - e.g., ask the model to generate subquestions before answering
 
-## What everyone is doing wrong
+---
 
-- Giving LLMs too much freedom, sometimes a simple deterministic function as a tool call is better than LLM
-- Not handling prompt injection well (there are various examples)
+## Context Management
+
+Every LLM is useful **until its context is ~60% full**. After that, it starts compressing and summarizing (lossy), and quality drops fast. This is why context strategy is just as important as prompt design.
+
+---
+
+## MCPs (Model Context Protocol)
+
+Custom MCPs allow you to inject **fresh, relevant context** into the LLM.
+
+- They’re not perfect — you must know _when_ to call them.
+- By design, MCPs act like API calls: fetch data → feed into LLM → get reasoning.
+
+**Example:**
+A PM asks, “How’s EPIC-6 going? Any red flags?”
+→ MCP fetches Jira data, injects it into the LLM context, and the system prompt guides the model’s response.
+
+---
+
+## What Everyone Gets Wrong
+
+- **Too much freedom:** Sometimes a simple deterministic function beats an LLM.
+- **Poor prompt injection handling:** Few people take this seriously enough.
+
+---
