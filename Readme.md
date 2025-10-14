@@ -8,9 +8,9 @@
 
 ### Observations – Short and Blunt
 
-“10X Developers” don’t exist. At best, you get a 3–4x boost.
-LLMS do produce good prompts for other LLMS.
-You need to know the model, and how to talk with it. English is a funny language and models are different
+- “10X Developers” don’t exist. At best, you get a 3–4x boost.
+- LLMS do produce good prompts for other LLMS.
+- You need to know the model, and how to talk with it. English is a funny language and models are different
 
 ---
 
