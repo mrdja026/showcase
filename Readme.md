@@ -34,9 +34,7 @@ The setup uses a **two-model approach**:
 - Direct link: [public/jira_mcp_demo.mp4](public/jira_mcp_demo.mp4)
 - Inline preview (may not render on all platforms):
 
-  <video src="public/jira_mcp_demo.mp4" controls width="720">
-  Your browser does not support the video tag. Use the direct link above.
-  </video>
+![JIRA-MCP-Epic-Analyzer](public/jira_mcp_demo.gif)
 
 ---
 
@@ -56,9 +54,7 @@ Steps:
 - Direct link: [public/merged_video.mp4](public/merged_video.mp4)
 - Inline preview (may not render on all platforms):
 
-  <video src="public/merged_video.mp4" controls width="720">
-  Your browser does not support the video tag. Use the direct link above.
-  </video>
+  ![Scene editor](public/merged_video.gif)
 
 ---
 
@@ -83,9 +79,7 @@ When I moved north, I found a dagger. That dagger then became part of the ongoin
 - Direct link: [public/dnd_agent_demo.mp4](public/dnd_agent_demo.mp4)
 - Inline preview (may not render on all platforms):
 
-  <video src="public/dnd_agent_demo.mp4" controls width="720">
-  Your browser does not support the video tag. Use the direct link above.
-  </video>
+  ![DND Agent Demo](public/dnd_agent_demo.gif)
 
 ---
 
